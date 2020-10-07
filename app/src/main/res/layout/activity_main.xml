@@ -26,6 +26,12 @@
                 android:layout_height="wrap_content"
                 android:text="Scale Animation" />
 
+            <Button
+                android:id="@+id/btnPositionAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Position Animation" />
+
         </LinearLayout>
 
     </ScrollView>

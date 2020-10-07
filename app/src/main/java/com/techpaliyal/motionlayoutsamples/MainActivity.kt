@@ -6,7 +6,7 @@ import com.techpaliyal.motionlayoutsamples.databinding.ActivityMainBinding
 
 /**
  * @author Yogesh Choudhary Paliyal
- * @since 01 Oct 2020
+ * @since 08 Oct 2020
  */
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnScaleAnimation.setOnClickListener {
             ScaleAnimationActivity.start(this)
+        }
+
+        binding.btnPositionAnimation.setOnClickListener {
+            PositionAnimationActivity.start(this)
         }
     }
 }

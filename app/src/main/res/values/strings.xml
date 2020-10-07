@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Motion Layout Samples</string>
     <string name="animate">Animate</string>
+    <string name="animate_to_end">Animate to End</string>
+    <string name="animate_to_start">Animate To Start</string>
 </resources>

@@ -4,27 +4,29 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.techpaliyal.motionlayoutsamples.databinding.ActivityScaleAnimationBinding
+import com.techpaliyal.motionlayoutsamples.databinding.ActivityPositionAnimationBinding
+
 
 /**
  * @author Yogesh Choudhary Paliyal
  * @since 08 Oct 2020
  */
-class ScaleAnimationActivity : AppCompatActivity() {
+class PositionAnimationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityScaleAnimationBinding
+    private lateinit var binding: ActivityPositionAnimationBinding
+
 
     companion object{
         @JvmStatic
         fun start(context: Context) {
-            val starter = Intent(context, ScaleAnimationActivity::class.java)
+            val starter = Intent(context, PositionAnimationActivity::class.java)
             context.startActivity(starter)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityScaleAnimationBinding.inflate(layoutInflater)
+        binding = ActivityPositionAnimationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnAnimateToEnd.setOnClickListener {
