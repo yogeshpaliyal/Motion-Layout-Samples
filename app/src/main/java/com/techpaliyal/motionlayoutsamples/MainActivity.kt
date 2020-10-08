@@ -25,5 +25,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnPositionAnimation.setOnClickListener {
             PositionAnimationActivity.start(this)
         }
+
+        binding.btnPathAnimation.setOnClickListener {
+            PathAnimationActivity.start(this)
+        }
     }
 }
