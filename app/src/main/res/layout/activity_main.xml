@@ -38,6 +38,13 @@
                 android:layout_height="wrap_content"
                 android:text="Path Animation" />
 
+
+            <Button
+                android:id="@+id/btnPathRotateAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Path+Rotate Animation" />
+
         </LinearLayout>
 
     </ScrollView>

@@ -29,5 +29,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnPathAnimation.setOnClickListener {
             PathAnimationActivity.start(this)
         }
+
+        binding.btnPathRotateAnimation.setOnClickListener {
+            PathRotateAnimationActivity.start(this)
+        }
     }
 }
