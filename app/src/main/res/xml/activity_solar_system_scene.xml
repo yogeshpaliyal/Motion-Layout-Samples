@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/earth_half"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:autoTransition="animateToEnd">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/earth"
+               motion:framePosition="50"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.5"
+               motion:percentY="0.5"
+               motion:pathMotionArc="startVertical" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintCircle="@id/sun"
+            motion:layout_constraintCircleAngle="0"
+            motion:pathMotionArc="startHorizontal"
+            motion:transitionEasing="linear" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/earth_half">
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintCircle="@id/sun"
+            motion:layout_constraintCircleAngle="180"
+            motion:transitionEasing="linear"
+            motion:pathMotionArc="startHorizontal" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/sun" />
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/back_to_start"
+        motion:deriveConstraintsFrom="@+id/earth_half">
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            motion:transitionEasing="linear"
+            motion:pathMotionArc="startVertical"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintCircle="@id/sun"
+            motion:layout_constraintCircleAngle="360" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/earth_half"
+        motion:constraintSetEnd="@+id/back_to_start"
+        motion:duration="1000"
+        motion:autoTransition="animateToEnd" >
+        <KeyFrameSet>
+            <KeyPosition
+                motion:motionTarget="@+id/earth"
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:pathMotionArc="startVertical" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/back_to_start"
+        motion:constraintSetEnd="@+id/start"
+        motion:duration="0"
+        motion:autoTransition="animateToEnd" />
+</MotionScene>

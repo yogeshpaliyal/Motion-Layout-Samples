@@ -45,6 +45,26 @@
                 android:layout_height="wrap_content"
                 android:text="Path+Rotate Animation" />
 
+
+            <Button
+                android:id="@+id/btnCustomAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Animation" />
+
+            <Button
+                android:id="@+id/btnFabAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fab Animation" />
+
+            <Button
+                android:id="@+id/btnSolarSystem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Solar System" />
+
+
         </LinearLayout>
 
     </ScrollView>

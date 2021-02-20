@@ -33,5 +33,16 @@ class MainActivity : AppCompatActivity() {
         binding.btnPathRotateAnimation.setOnClickListener {
             PathRotateAnimationActivity.start(this)
         }
+
+        binding.btnCustomAnimation.setOnClickListener {
+            CustomAnimationActivity.start(this)
+        }
+
+        binding.btnFabAnimation.setOnClickListener {
+            NestedScrollAnimation.start(this)
+        }
+        binding.btnSolarSystem.setOnClickListener {
+            SolarSystemActivity.start(this)
+        }
     }
 }

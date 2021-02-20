@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/startTransition"
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/earth_half"
+        motion:duration="3000"
+        motion:autoTransition="animateToEnd"
+        motion:pathMotionArc="startHorizontal">
+
+        <KeyFrameSet>
+           <!-- <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="0"
+                motion:percentX="0.25"
+                motion:pathMotionArc="startVertical"
+                motion:percentY="0.50"
+                motion:keyPositionType="parentRelative" />
+
+            <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="25"
+                motion:percentX="0.50"
+                motion:pathMotionArc="startHorizontal"
+                motion:percentY="0.25"
+                motion:keyPositionType="parentRelative" />
+
+
+            <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="50"
+                motion:percentX="0.75"
+                motion:percentY="0.50"
+                motion:pathMotionArc="startVertical"
+                motion:keyPositionType="parentRelative"/>
+
+            <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="75"
+                motion:percentX="0.50"
+                motion:pathMotionArc="startHorizontal"
+                motion:percentY="0.75"
+                motion:keyPositionType="parentRelative"/>-->
+
+
+        </KeyFrameSet>
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/earth">
+            <Layout
+                motion:layout_constraintCircleAngle="360"
+                motion:layout_constraintCircleRadius="100dp"
+                motion:layout_constraintCircle="@id/sun" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/earth_half">
+
+        <Constraint
+            android:id="@+id/earth">
+            <Layout
+                motion:layout_constraintCircleAngle="360"
+                motion:layout_constraintCircleRadius="100dp"
+                motion:layout_constraintCircle="@id/sun" />
+            <Motion motion:motionPathRotate="100"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+
+</MotionScene>

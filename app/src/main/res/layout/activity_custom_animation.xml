@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:showPaths="true"
+    android:background="@color/black"
+    android:id="@+id/motionLayout"
+    app:layoutDescription="@xml/activity_custom_animation_scene_new"
+    tools:context=".CustomAnimationActivity">
+
+    <View
+        android:id="@+id/sun"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@drawable/circle"
+        android:backgroundTint="#eefa11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        app:layout_constraintDimensionRatio="1:1"
+        android:id="@+id/earth"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#08fc41"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircle="@id/sun"/>
+
+
+    <View
+        app:layout_constraintDimensionRatio="1:1"
+        android:id="@+id/moon"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/white"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircle="@id/earth"
+        app:layout_constraintCircleRadius="30dp"/>
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

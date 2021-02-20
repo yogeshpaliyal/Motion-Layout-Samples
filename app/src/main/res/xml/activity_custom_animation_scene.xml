@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/startTransition"
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/angle45"
+        motion:duration="3000"
+        motion:autoTransition="animateToEnd"
+        motion:pathMotionArc="startHorizontal">
+
+        <KeyFrameSet>
+           <!-- <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="0"
+                motion:percentX="0.25"
+                motion:pathMotionArc="startVertical"
+                motion:percentY="0.50"
+                motion:keyPositionType="parentRelative" />
+
+            <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="25"
+                motion:percentX="0.50"
+                motion:pathMotionArc="startHorizontal"
+                motion:percentY="0.25"
+                motion:keyPositionType="parentRelative" />
+
+
+            <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="50"
+                motion:percentX="0.75"
+                motion:percentY="0.50"
+                motion:pathMotionArc="startVertical"
+                motion:keyPositionType="parentRelative"/>
+
+            <KeyPosition motion:motionTarget="@id/earth"
+                motion:framePosition="75"
+                motion:percentX="0.50"
+                motion:pathMotionArc="startHorizontal"
+                motion:percentY="0.75"
+                motion:keyPositionType="parentRelative"/>-->
+
+
+        </KeyFrameSet>
+
+    </Transition>
+
+
+    <Transition
+        android:id="@+id/transition45to90"
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetStart="@id/angle45"
+        motion:constraintSetEnd="@+id/angle90"
+        motion:duration="3000"
+        motion:pathMotionArc="startHorizontal" />
+
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        android:id="@+id/transition90to135"
+        motion:constraintSetStart="@id/angle90"
+        motion:constraintSetEnd="@+id/angle135"
+        motion:duration="3000"
+        motion:pathMotionArc="startVertical" />
+
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        android:id="@+id/transition135to180"
+        motion:constraintSetStart="@id/angle135"
+        motion:constraintSetEnd="@+id/angle180"
+        motion:duration="3000"
+        motion:pathMotionArc="startVertical" />
+
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        android:id="@+id/transition180to225"
+        motion:constraintSetStart="@id/angle180"
+        motion:constraintSetEnd="@+id/angle225"
+        motion:duration="3000"
+        motion:pathMotionArc="startHorizontal" />
+
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        android:id="@+id/transition225to270"
+        motion:constraintSetStart="@id/angle225"
+        motion:constraintSetEnd="@+id/angle270"
+        motion:duration="3000"
+        motion:pathMotionArc="startHorizontal" />
+
+
+    <Transition
+        android:id="@+id/transition270to315"
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetStart="@id/angle270"
+        motion:constraintSetEnd="@+id/angle315"
+        motion:duration="3000"
+        motion:pathMotionArc="startVertical" />
+
+    <Transition
+        android:id="@+id/transition315to360"
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetStart="@id/angle315"
+        motion:constraintSetEnd="@+id/angle360"
+        motion:duration="3000"
+        motion:pathMotionArc="startVertical" />
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/angle45">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="90"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="45"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/angle90">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="90"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/angle135">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/angle180">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="180"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/angle225">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="225"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/angle270">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="270"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/angle315">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="315"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/angle360">
+
+        <Constraint
+            android:id="@+id/moon"
+            motion:layout_constraintCircleAngle="135"
+            motion:layout_constraintCircle="@id/earth"
+            motion:layout_constraintCircleRadius="30dp"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1:1"/>
+
+
+        <Constraint
+            android:id="@+id/earth"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintCircleAngle="360"
+            motion:layout_constraintCircleRadius="100dp"
+            motion:layout_constraintCircle="@id/sun"/>
+
+    </ConstraintSet>
+
+</MotionScene>
