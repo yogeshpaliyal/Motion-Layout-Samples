@@ -14,6 +14,7 @@
         <activity android:name=".PathAnimationActivity" />
         <activity android:name=".PositionAnimationActivity" />
         <activity android:name=".ScaleAnimationActivity" />
+        <activity android:name=".SwipeToChangeColorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
