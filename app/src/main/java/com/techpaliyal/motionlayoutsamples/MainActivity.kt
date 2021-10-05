@@ -44,5 +44,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnSolarSystem.setOnClickListener {
             SolarSystemActivity.start(this)
         }
+        binding.btnSwipeWithColorChange.setOnClickListener {
+            SwipeToChangeColorActivity.start(this)
+        }
     }
 }
